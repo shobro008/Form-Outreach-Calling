@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outreach Calling Volunteers Data Collection (Outreach Division)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 400px;
+            border-top: 5px solid #007bff;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+        .form-label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Outreach Calling Volunteers Data Collection (Outreach Division)<br>For Innovation Cell-Techfest Events</h1>
+    
+    <form action="https://formspree.io/f/your-endpoint" method="POST">
+        
+        <!-- Name -->
+        <label class="form-label" for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+        <!-- Roll No -->
+        <label class="form-label" for="roll-no">Roll No.</label>
+        <input type="number" id="roll-no" name="roll_no" placeholder="Enter your roll number" required>
+
+        <!-- Program -->
+        <label class="form-label" for="program">Program</label>
+        <select id="program" name="program" required>
+            <option value="">Select your program</option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="MBA">MBA</option>
+            <option value="B.Arch">B.Arch</option>
+            <option value="B.Plan">B.Plan</option>
+        </select>
+
+        <!-- Year -->
+        <label class="form-label" for="year">Year</label>
+        <select id="year" name="year" required>
+            <option value="">Select your year</option>
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+        </select>
+
+        <!-- Active WA Number -->
+        <label class="form-label" for="wa-number">Active WhatsApp Number</label>
+        <input type="text" id="wa-number" name="wa_number" placeholder="Enter your active WA number" required>
+
+        <!-- English Speaking Experience -->
+        <label class="form-label" for="english-experience">Do you have prior English speaking experience?</label>
+        <textarea id="english-experience" name="english_experience" rows="4" placeholder="Describe any prior English speaking experience (if any)" required></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+    
+    <footer>
+        <p><strong>Shobhit Sharma</strong><br>Head of Outreach Team, Acting President of The Innovation Cell, and Member/Co-Organiser, Techspardha 25</p>
+    </footer>
+</div>
+
+</body>
+</html>
