@@ -25,7 +25,8 @@
             border-top: 8px solid #009688;
             border-bottom: 8px solid #009688;
             background-image: url('https://www.transparenttextures.com/patterns/asfalt.png');
-            margin-top: 50px; /* Adds space from the top */
+            margin-top: 20px; /* Adds space from the top */
+            box-sizing: border-box; /* Ensures padding doesn't affect overall width */
         }
         h1 {
             font-size: 24px;
@@ -34,6 +35,7 @@
             color: #333;
             font-weight: bold;
             font-family: 'Verdana', sans-serif;
+            padding-top: 20px; /* Prevents heading from getting too close to the top */
         }
         .form-label {
             font-size: 16px;
@@ -76,8 +78,15 @@
         footer p {
             font-family: 'Arial', sans-serif;
         }
+        /* Ensures the entire form is centered even when content overflows */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
         .form-container {
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -123,6 +132,22 @@
         <!-- English Speaking Experience -->
         <label class="form-label" for="english-experience">Do you have prior English speaking experience?</label>
         <textarea id="english-experience" name="english_experience" rows="4" placeholder="Describe any prior English speaking experience (if any)" required></textarea>
+
+        <!-- Event Contribution -->
+        <label class="form-label" for="event-contribution">Which Event would you like to contribute to?</label>
+        <div>
+            <label>
+                <input type="radio" name="event_contribution" value="Organizing Committee" required> Organizing Committee
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="event_contribution" value="Bid Bizz Organizing Committee"> Bid Bizz Organizing Committee
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="event_contribution" value="Both"> Both
+            </label>
+        </div>
 
         <!-- Submit Button -->
         <button type="submit">Submit</button>
