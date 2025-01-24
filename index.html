@@ -78,7 +78,6 @@
         footer p {
             font-family: 'Arial', sans-serif;
         }
-        /* Ensures the entire form is centered even when content overflows */
         html, body {
             height: 100%;
             margin: 0;
@@ -167,11 +166,17 @@
         <strong>Shobhit Sharma</strong><br>
         Head of Outreach Team, Acting President of The Innovation Cell,<br>
         Member/Co-Organiser, Techspardha 25<br><br>
-        <em>Date: </em> [Insert Date Here]
+        <em>Date:</em> <span id="currentDateTime"></span>
     </p>
 </footer>
-
 </div>
+
+<script>
+    // Script to dynamically insert the current date and time
+    const now = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    document.getElementById('currentDateTime').textContent = now.toLocaleDateString('en-US', options);
+</script>
 
 </body>
 </html>
