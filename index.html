@@ -14,7 +14,7 @@
             align-items: flex-start;
             height: 100%;
             background-color: #f4f4f4;
-            overflow-y: auto; /* Enables vertical scroll */
+            overflow-y: auto;
         }
         .form-container {
             background-color: #ffffff;
@@ -25,8 +25,8 @@
             border-top: 8px solid #009688;
             border-bottom: 8px solid #009688;
             background-image: url('https://www.transparenttextures.com/patterns/asfalt.png');
-            margin-top: 20px; /* Adds space from the top */
-            box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+            margin-top: 20px;
+            box-sizing: border-box;
         }
         h1 {
             font-size: 24px;
@@ -35,39 +35,13 @@
             color: #333;
             font-weight: bold;
             font-family: 'Verdana', sans-serif;
-            padding-top: 20px; /* Prevents heading from getting too close to the top */
         }
-        .form-label {
-            font-size: 16px;
+        .closed-message {
+            text-align: center;
+            color: #d9534f;
+            font-size: 18px;
+            margin-top: 20px;
             font-weight: bold;
-            margin-bottom: 5px;
-            color: #444;
-            font-family: 'Arial', sans-serif;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            font-size: 16px;
-            background-color: #f9f9f9;
-            font-family: 'Arial', sans-serif;
-        }
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: #009688;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-        }
-        button:hover {
-            background-color: #00796b;
         }
         footer {
             text-align: center;
@@ -78,102 +52,75 @@
         footer p {
             font-family: 'Arial', sans-serif;
         }
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        .form-container {
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
-        .icon {
-            text-align: center;
-            font-size: 40px;
-            color: #009688;
-            margin-bottom: 10px;
-        }
     </style>
 </head>
 <body>
 
-<div class="form-container">
-    <!-- Geeky Symbol (Gear Icon) -->
-    <div class="icon">
-        <span>&#9881;</span> <!-- Gear Symbol (Unicode) -->
-    </div>
-    
-    <h1>Outreach Calling Volunteers Data Collection (Outreach Division)<br>For Innovation Cell-Techfest Events</h1>
-    
-    <form action="https://script.google.com/macros/s/AKfycbzPobMs9_CE5Ih6Q7pxBqS2_KA9uuZYR6Hn_lvxfMK6Aw8hAR-4r_kIIkXN4cEgVhcl/exec" method="POST">
-        
-        <!-- Full Name -->
-        <label class="form-label" for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-        
-        <!-- Active Domain Email ID -->
-        <label class="form-label" for="email">Active Domain Email ID</label>
-        <input type="email" id="email" name="email" placeholder="Enter your active email (yourname@nitkkr.ac.in)" pattern="^[a-zA-Z0-9._%+-]+@nitkkr\.ac\.in$" required>
-        
-        <!-- Roll No -->
-        <label class="form-label" for="roll-no">Roll No.</label>
-        <input type="number" id="roll-no" name="roll_no" placeholder="Enter your roll number" required>
+<div class="form-container" id="formContainer">
+    <h1>Outreach Calling Volunteers Data Collection (Outreach Division)</h1>
+    <div id="formContent"></div>
+</div>
 
-        <!-- Program -->
-        <label class="form-label" for="program">Program</label>
-        <select id="program" name="program" required>
-            <option value="">Select your program</option>
-            <option value="B.Tech">B.Tech</option>
-            <option value="MBA">MBA</option>
-            <option value="B.Arch">B.Arch</option>
-            <option value="B.Plan">B.Plan</option>
-        </select>
-
-        <!-- Year -->
-        <label class="form-label" for="year">Year</label>
-        <select id="year" name="year" required>
-            <option value="">Select your year</option>
-            <option value="1">1st Year</option>
-            <option value="2">2nd Year</option>
-            <option value="3">3rd Year</option>
-            <option value="4">4th Year</option>
-        </select>
-
-        <!-- Active WA Number -->
-        <label class="form-label" for="wa-number">Active WhatsApp Number</label>
-        <input type="text" id="wa-number" name="wa_number" placeholder="Enter your active WA number" required>
-
-        <!-- English Speaking Experience -->
-        <label class="form-label" for="english-experience">Do you have prior English speaking experience?</label>
-        <textarea id="english-experience" name="english_experience" rows="4" placeholder="Describe any prior English speaking experience (if any)" required></textarea>
-
-        <!-- Event Contribution -->
-        <label class="form-label" for="event-contribution">Which event would you like to contribute to?</label>
-        <select id="event-contribution" name="event_contribution" required>
-            <option value="">Select event</option>
-            <option value="Case on Point">Case on Point</option>
-            <option value="Bid Bizz">Bid Bizz</option>
-            <option value="Both">Both</option>
-        </select>
-
-        <!-- Submit Button -->
-        <button type="submit">Submit</button>
-    </form>
-    
-    <footer>
+<footer>
     <p style="font-size: 14px; font-family: 'Arial', sans-serif; text-align: center; color: #555;">
         <strong>Undersigned:</strong><br><br>
         <strong>Shobhit Sharma</strong><br>
-        Head of Outreach Team, Acting President of The Innovation Cell,<br>
-        Member/Co-Organiser, Techspardha 25<br><br>
+        President, Innovation Cell, NIT Kurukshetra<br><br>
         <em>Date:</em> <span id="currentDateTime"></span>
     </p>
 </footer>
-</div>
 
 <script>
-    // Script to dynamically insert the current date and time
+    // Deadline for the form (YYYY-MM-DD)
+    const deadline = new Date('2025-01-24T23:59:59'); // Deadline: 24th Jan 2025
     const now = new Date();
+
+    const formContent = document.getElementById('formContent');
+    if (now > deadline) {
+        // Form closed
+        formContent.innerHTML = `<p class="closed-message">The form is now closed. The deadline has exceeded.<br>Regards,<br><strong>Shobhit Sharma</strong><br>President, Innovation Cell</p>`;
+    } else {
+        // Form open
+        formContent.innerHTML = `
+            <form action="https://script.google.com/macros/s/AKfycbzPobMs9_CE5Ih6Q7pxBqS2_KA9uuZYR6Hn_lvxfMK6Aw8hAR-4r_kIIkXN4cEgVhcl/exec" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                <label for="email">Active Domain Email ID</label>
+                <input type="email" id="email" name="email" placeholder="Enter your active email (yourname@nitkkr.ac.in)" pattern="^[a-zA-Z0-9._%+-]+@nitkkr\\.ac\\.in$" required>
+                <label for="roll-no">Roll No.</label>
+                <input type="number" id="roll-no" name="roll_no" placeholder="Enter your roll number" required>
+                <label for="program">Program</label>
+                <select id="program" name="program" required>
+                    <option value="">Select your program</option>
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="MBA">MBA</option>
+                    <option value="B.Arch">B.Arch</option>
+                    <option value="B.Plan">B.Plan</option>
+                </select>
+                <label for="year">Year</label>
+                <select id="year" name="year" required>
+                    <option value="">Select your year</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+                <label for="wa-number">Active WhatsApp Number</label>
+                <input type="text" id="wa-number" name="wa_number" placeholder="Enter your active WA number" required>
+                <label for="english-experience">Do you have prior English speaking experience?</label>
+                <textarea id="english-experience" name="english_experience" rows="4" placeholder="Describe any prior English speaking experience (if any)" required></textarea>
+                <label for="event-contribution">Which event would you like to contribute to?</label>
+                <select id="event-contribution" name="event_contribution" required>
+                    <option value="">Select event</option>
+                    <option value="Case on Point">Case on Point</option>
+                    <option value="Bid Bizz">Bid Bizz</option>
+                    <option value="Both">Both</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>`;
+    }
+
+    // Display the current date and time
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
     document.getElementById('currentDateTime').textContent = now.toLocaleDateString('en-US', options);
 </script>
